@@ -1,0 +1,108 @@
+<%include  shared/_Layout.ejs%>
+
+<%
+    var noError         = 0,
+        name            = "",
+        description     = "",
+        eduPlace        = "",
+        image           = "",
+        username        = "",
+        password        = "",
+        conPassword     = "",
+        existUsername   = ""
+
+    if(errors){
+        noError = 1;
+        //get the input fields validation from data array
+        if(errors.data){
+            errors.data.forEach(value => {
+                if(value.param == 'name')
+                    name = value.msg
+                else if(value.param == 'description')
+                    description = value.msg
+                else if(value.param == 'eduPlace')
+                    eduPlace = value.msg
+                else if(value.param == 'username')
+                    username = value.msg
+                else if(value.param == 'password')
+                    password = value.msg
+                else if(value.param == 'conPassword')
+                    conPassword = value.msg
+            })
+        }
+        //now get the rest or errors
+        if(errors.existUsername)
+            existUsername = errors.existUsername
+        if(errors.image)
+            image = errors.image
+           
+    }
+
+    //return the body values in the its fields
+%>
+  
+ <!-- Register Section -->
+<section class="footer-container footer-regist">
+    <div class="container">
+        <div class="row">
+            <h1><span>قم بانشاء</span><span>حساب جديد</span></h1>
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="contact-form">
+                    <form role="form" action="Register" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <input class="contact-email form-control input-lg" name="name"  type="text" placeholder = "ادخل اسمك" value="<%if(data.name)%><%=data.name%>">
+                            <% if(name != ''){ %><div class="text-danger"><%= name %></div><%}%>
+                        </div>
+                        <div class="form-group">
+                            <input class = "contact-email form-control input-lg" name="eduPlace"  placeholder = "اسم الكليه/المدرسة إن وجد" type="text" value="<%if(data.eduPlace)%><%=data.eduPlace%>">
+                            <% if(eduPlace != ''){ %><div class="text-danger"><%= eduPlace %></div><%}%>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea class = "contact-email form-control input-lg" name="description"  placeholder = "وصف موجز عن شعورك تجاه سبب سعاتك"><%if(data.description)%><%=data.description%></textarea>
+                            <% if(description != ''){ %><div class="text-danger"><%= description %></div><%}%>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-4">
+                                <img class="img-responsive img-thumbnail img-rounded" id="img-register"/>
+                            </div>
+                           <div class="col-xs-8">
+                               <label>أضف صورة</label>
+                               <input type="file" class = "form-control input-lg add-image" name="file" id="file">
+                           </div>
+                           <% if(image != ''){ %> <div class="text-danger"><%= image %></div><% } %>
+                        </div>
+                        <div class="form-group">
+                            <input class = "contact-email form-control input-lg" name="username"  placeholder = "اسم المستخدم" required="required" type="text" value="<%if(data.username)%><%=data.username%>">
+                            <% if(username != ''){ %> <div class="text-danger"><%= username %></div><% } %>
+                            <% if(existUsername != ''){ %> <div class="text-danger"><%= existUsername %></div><% } %>
+
+                        </div>
+                        <div class="form-group">
+                            <input class = "contact-email form-control input-lg" name="password"  placeholder = " الرقم السري الجديد" type="password" value="<%if(data.password)%><%=data.password%>">
+                            <% if(password != ''){ %><div class="text-danger"><%= password %></div><%}%>
+                        </div>
+                        <div class="form-group">
+                            <input class = "contact-email form-control input-lg" name="conPassword"  placeholder = "تاكيد الرقم السري الجديد" type="password" value="<%if(data.conPassword)%><%=data.conPassword%>">
+                            <% if(conPassword != ''){ %><div class="text-danger"><%= conPassword %></div><%}%>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-danger btn-block input-lg">عمل حساب</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<%include shared/footer.ejs%>
+
+
+<script>
+    $('#file').on('change', function (e) {
+        $('#img-register').fadeIn('fast').attr('src', URL.createObjectURL(e.target.files[0]));
+    });
+</script>
+
+

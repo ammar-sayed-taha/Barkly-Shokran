@@ -1,0 +1,66 @@
+<%
+include shared/_Layout.ejs
+
+//check if there is session or not
+%>
+
+<section class="footer-container footer-user-page">
+        <div class="services-container section-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 services section-description wow fadeIn">
+                        <h1><%= data.name%> <bdi>مرحبا بك</bdi></h1>
+                        <!-- <div class="divider-1 wow fadeInUp"><span></span></div> -->
+                    </div>
+                    <div class="col-sm-4 services-box wow fadeInUp">
+                        <div class="messages">
+                            <div class="col-sm-4">
+                                <div class="services-box-icon">
+                                    <i class="fa fa-commenting-o"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <a href="Messages?id=<%= data._id%>">
+                                    <h3>الرسائل </h3>
+                                    <p>رسائل التهنئة المرسلة اليك </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 services-box wow fadeInDown">
+                        <div class="shared">
+                            <div class="col-sm-4">
+                                <div class="services-box-icon">
+                                    <i class="fa fa-twitter"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <a href="MyPage?id=<%= data._id%>">
+                                    <h3>صفحتك </h3>
+                                    <p>الصفحة التي تشاركها مع الأخرين</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 services-box wow fadeInUp">
+                        <div class="info">
+                            <div class="col-sm-4">
+                                <div class="services-box-icon">
+                                    <i class="fa fa-cog"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <a href="MyInfo?id=<%= data._id%>">
+                                    <h3>معلوماتك</h3>
+                                    <p>اضف/احذف/عدل معلوماتك</p>
+                                </a>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+
+            </div>
+        </div>
+</section>
+
+<%include shared/footer.ejs%>

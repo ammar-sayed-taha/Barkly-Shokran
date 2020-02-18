@@ -1,0 +1,746 @@
+﻿
+/********************************** Start Style Of Home Page **********************************/
+/*** Start Global Styles ***/
+@font-face {
+    font-family: "Droid Arabic Kufi";
+    src: url('../fonts/DroidKufi-Bold.ttf') format('truetype');
+}
+* {
+    font-family:"Droid Arabic Kufi", Tahoma;
+}
+body {
+    text-align: right;
+    margin-top: 50px;
+    overflow:hidden;
+}
+
+h1,h2
+{
+	font-size: 50px;
+    line-height: 50px;
+    color:#FFF;
+}
+h3 {
+	font-size: 22px;
+    line-height: 30px;
+    text-align: center
+}
+textarea { resize:vertical; }
+a, a:hover, a:focus {
+	text-decoration: none;
+}
+
+
+/*Selections*/
+::-moz-selection {color: #fff; text-shadow: none; }
+::selection {color: #fff; text-shadow: none; }
+
+
+h1,h2,.wel-come .wel .typed,
+.slide-show .carousel-inner .carousel-caption > h3
+ {font-weight:bold; text-align: center}
+.footer-container .dark-bg, .alert .dark-bg
+{
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:rgba(0,0,0,.3);
+    width:100%;
+    height:100%;
+}
+.log-regist button, .footer-container button,
+ .counter h4,body *, .alert
+{
+    -o-transition: all linear .4s; 
+    -moz-transition: all linear .4s; 
+    -webkit-transition: all linear .4s; 
+    -ms-transition: all linear .4s; 
+    transition: all linear .4s;
+}
+
+/*The Social Links Of AddToAny Website In The Footer*/
+footer .footer-bottom .a2a_kit a {margin-bottom:20px;}
+.a2a_label{display:none;}
+
+.footer-user-page, .footer-message, .user-info, .mypage
+{
+    background: url(../img/backgrounds/body_bg.jpg);
+}
+
+.contact-form {
+	padding: 20px 0;
+}
+
+.contact-form textarea {
+	height: 100px;
+}
+
+.contact-form .input-error {
+	border-color: #ff8a38;
+}
+
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #F8F8F8;
+    z-index: 10000;
+    top: 0;
+}
+#loading .load-shap
+{
+    position:relative;
+    top: 36%;
+    left: -46%;
+}
+#loading .load-shap img
+{
+    position: relative;
+    right: 50px;
+    width: 35px;
+    margin-bottom: 5px;
+}
+
+#loading .load-text
+{
+    position:relative;
+    margin:10px -32px 0 0;
+    font-size:20px;
+    font-weight:bold;
+}
+#loading .load-text span {position:relative; animation: move .6s linear infinite alternate;}
+
+#loading .load-text span:first-of-type {color:#fd41a6;}
+#loading .load-text span:nth-of-type(2) {color:#E933B1; animation-delay:.1s;}
+#loading .load-text span:nth-of-type(3) {color:#77F23C; animation-delay:.2s;}
+#loading .load-text span:nth-of-type(4) {color:#FF3333; animation-delay:.3s;}
+#loading .load-text span:nth-of-type(5) {color:#D1FF33; animation-delay:.4s;}
+#loading .load-text span:nth-of-type(6) {color:#77F23C; animation-delay:.5s;}
+#loading .load-text span:nth-of-type(7) {color:#E933B1; animation-delay:.5s;}
+#loading .load-text span:nth-of-type(8) {color:#FF3333; animation-delay:.5s;}
+#loading .load-text span:nth-of-type(9) {color:#77F23C; animation-delay:.5s;}
+#loading .load-text span:last-of-type {color:#E933B1; animation-delay:.6s;}
+
+@keyframes move
+{
+    0% {bottom:6px;}
+    100% {bottom:-6px;}
+}
+
+/***************************************************************************/
+
+
+/*** End Global Styles ***/
+
+/*Start Bootstrap Sahred Style*/
+
+/*Navbar Style*/
+
+/***** Top menu *****/
+
+.navbar {
+	margin-bottom: 0;
+	border: 0;
+    font-weight:bold;
+	-o-transition: all .6s; 
+    -moz-transition: all .6s; 
+    -webkit-transition: all .6s; 
+    -ms-transition: all .6s; 
+    transition: all .6s;
+}
+
+/*.navbar.navbar-no-bg { 
+    background: rgb(45, 54, 76);
+}*/
+.navbar-right { margin-right: 0; }
+
+ul.navbar-nav {
+	font-size: 15px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.navbar-brand {padding: 4px 0 0;}
+.navbar-inverse ul.navbar-nav li a { 
+    padding-top: 14px; 
+    padding-bottom: 10px; 
+    color: #fff; 
+    /*text-shadow: 1px 1px 5px #333;*/
+}
+.navbar-inverse ul.navbar-nav li a:hover { color: #fff; opacity: .8; }
+.navbar-inverse ul.navbar-nav li a:focus { color: #fff; outline: 0; opacity: 1; }
+
+
+/*while clicking on the button to show next slide*/
+.carousel-control.right, .carousel-control.left
+{
+    background-image: none;
+    z-index:4;
+}
+.carousel-control span, 
+.carousel-control span
+{
+    position: relative;
+    text-shadow: 1px 1px 3px #333;
+    top: 50%;
+}
+
+/*End Bootstrap Sahred Style*/
+
+/*Start Slide Show Style*/
+.slide-show .carousel-inner img {min-width:100%;}
+.slide-show .carousel-inner .carousel-caption
+{
+    background:rgba(0,0,0,.5);
+    border-radius:10px;
+    padding-bottom: 50px;
+
+}
+.slide-show .carousel-inner .carousel-caption > h3
+{
+    color:#FFF;
+    font-size:30px;
+}
+.slide-show .carousel-inner > .item {z-index:2;}
+/*End Slide Show Style*/
+
+/* Start Welcome Section */
+
+.wel-come
+{
+    padding: 75px 0 100px 0;
+    /*background-color: #2d364c;*/
+    letter-spacing: 2.5px;
+    word-spacing: 4px;
+
+}
+.wel-come * {
+    color:#FFF;
+    text-align:center;
+}
+.wel-come h1 {margin: 0 0 66px;font-size: 60px;}
+.wel-come .wel .typed
+{
+    font-size: 25px;
+    margin: 0px 1px;
+}
+/* End Welcome Section */
+
+
+/*Start Login And Register Section*/
+.log-regist
+{
+    padding:100px 0 90px;
+    background:url(../img/backgrounds/body_bg.jpg);
+}
+
+.log-regist h2 {margin:0 0 50px 0;color:#444}
+.log-regist button, .footer-container button
+{
+    font-size: 31px;
+    height: 72px;
+    color:#FFF;
+    margin:20px 0;
+}
+
+/*End Login And Register Section*/
+/*Start Counter Section*/
+.counter
+{
+    position: relative;
+    text-align:center;
+    padding: 80px 0;
+    /*background: #F3F3F3;*/
+}
+.counter label, .counter h4
+{
+    font-size:30px;
+}
+.counter h4
+{
+    color:#666;
+    margin:20px 0 7px;
+    font-weight: bold;
+    
+}
+.counter i
+{
+    font-size:50px;
+}
+
+/*Start Settings Section*/
+
+.web_colors
+{
+    position: fixed;
+    left:-225px;
+    top: 65px;
+    z-index:2;
+    
+}
+.web_colors .settings, .colors {float:left;}
+.web_colors .settings {border-radius:0 10px 10px 0;}
+.web_colors .colors 
+{
+    padding: 10px;
+    color: #fff;
+    border-radius: 0px 0px 15px 0;
+
+}
+.web_colors .colors> span
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor:pointer;
+
+}
+
+.web_colors .colors> span:nth-of-type(1) {background: #d63a35;} /*red*/
+.web_colors .colors> span:nth-of-type(2) {background: #13AB53;}  /*green*/
+.web_colors .colors> span:nth-of-type(3) {background: rgb(45, 54, 76);}  /*blue*/
+.web_colors .colors> span:nth-of-type(4) {background: #3cacc5;} /*yellow*/
+.web_colors .colors> span:nth-of-type(5) {background: #333;} /*yellow*/
+.web_colors .colors> span:nth-of-type(6) {background: #FF1493;} /*Pink*/
+
+
+.web_colors .settings .icon i
+{
+    font-size: 25px;
+    padding: 5px;
+    color: #fff;
+    cursor:pointer;
+    transition: all ease-in-out 1s;
+}
+
+
+/*Alert Style*/
+.alert
+{
+    width: 100%;
+    height:0;
+    z-index: 9999;
+    padding: 0;
+    margin: -2px;
+}
+.alert h2 {
+    position: relative;
+    font-size:20px;
+    color:#3c763d;
+    margin: 0;
+}
+
+
+
+/********************************** End Style Of Home Page **********************************/
+
+/********************************** Start Style Of Login Page **********************************/
+
+.footer-log
+{
+    padding:50px 0 100px;
+    position:relative;
+}
+
+.footer-log h1 {margin: 0 0 50px 0; color:#fff}
+.footer-log h1 > span:last-child{border-radius: 10px;}
+
+.footer-log .contact-form .form-group {direction:rtl;}
+.footer-log .form-group input {
+    margin-bottom: 33px;
+    outline: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-width: 0 0 2px 0;
+}
+
+.footer-log button{ /*There are another styles but in top*/ margin-top:40px;}
+
+/********************************** End Style Of Login Page **********************************/
+
+/********************************** Start Style Of Register Page **********************************/
+.footer-regist
+{
+    padding:60px 0;
+    position:relative;
+    direction:rtl;
+    background: #fff;
+}
+
+.footer-regist h1
+{
+    position:relative;
+    margin-bottom: 40px;
+}
+.footer-regist h1 > span:last-child {
+    border-radius:10px;
+}
+
+.footer-regist input, .footer-regist textarea {
+    background-color: rgba(0,0,0,.0);
+    color: #000;
+    letter-spacing: 1px;
+    font-weight: bold;
+    resize: vertical;
+    margin-bottom: 33px;
+    outline: none;
+    border-radius: 0;
+    box-shadow: none !important;
+    border-width: 0 0 2px 0;
+}
+
+
+.footer-regist label
+{
+    color:#444;
+    font-size:30px;
+}
+
+/*Change The Color Of Placeholder for all browsers*/
+.footer-regist ::-webkit-input-placeholder{ /* WebKit, Blink, Edge */
+    color:    rgba(0, 0, 0, 0.7);
+}
+.footer-regist :-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+    color:    rgba(0, 0, 0, 0.7);
+   opacity:  1;
+}
+.footer-regist ::-moz-placeholder{ /* Mozilla Firefox 19+ */
+    color:    rgba(0, 0, 0, 0.7);
+   opacity:  1;
+}
+.footer-regist :-ms-input-placeholder{ /* Internet Explorer 10-11 */
+    color:    rgba(0, 0, 0, 0.7);
+}
+.footer-regist ::-ms-input-placeholder{ /* Microsoft Edge */
+    color:    rgba(0, 0, 0, 0.7);
+}
+
+/********************************** End Style Of Register Page **********************************/
+
+/********************************** Start Style Of AllUserPage Page **********************************/
+
+.footer-user-page {
+    padding:0 0 150px 0;
+    text-align: center;
+    background: url(../img/backgrounds/body_bg.jpg);
+}
+.footer-user-page h1 {
+    color:#444;
+    margin-bottom:140px;
+}
+.footer-user-page h1 bdi {color:#666}
+
+.footer-user-page .services-box .services-box-icon {
+	width: 80px;
+	height: 80px;
+	margin: 0 auto;	
+    font-size: 40px;
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+}
+.footer-user-page .services-box .services-box-icon i
+{
+    line-height: 80px;
+}
+.footer-user-page .services-box h3 {
+	margin-top: 0;
+	padding: 0 0 10px 0;
+}
+
+
+.section-bottom-button {
+    margin-top:80px;
+}
+.section-bottom-button a {
+    font-size:25px;
+}
+
+/********************************** End Style Of AllUserPage Page **********************************/
+
+
+/********************************** Start Style Of Messages Page **********************************/
+
+.footer-message {padding: 50px 0 250px;}
+
+.footer-message h1
+{
+    color:#333;
+    font-size:30px;
+    margin-bottom: 150px;
+}
+
+.footer-message .message-once
+{
+    margin-top:30px;
+    margin-bottom:30px;
+    padding: 45px 20px;
+    color: #FFF;
+    background-color:#DDD;
+    border:solid 1px #CCC;
+    font-weight:bold;
+}
+.footer-message .message-once .description > span {color:#333;}
+
+.footer-message .message-once .sender-image
+{
+    background-color:#13AB53;
+    border:solid 1px #13AB53;
+    border-radius:20px;
+    padding:10px;
+}
+.footer-message .message-once .sender-name,
+.footer-message .empty-messages
+{
+    background-color: #c9302c;
+    border-color: #ac2925;
+    border-radius:20px 20px 0 0;
+    padding:10px;
+    margin-bottom:5px;
+    font-size:20px;
+}
+
+.footer-message .message-once .sender-name > span {display: inline-block}
+
+.footer-message .empty-messages
+{
+    border-radius: 20px;
+}
+
+.footer-message .message-once .sender-body
+{
+    background-color:#FFF;
+    border:solid 1px rgba(0,0,0,.3);
+    color:#333;
+    border-radius:0 0 20px 20px;
+    padding:5px;
+    height:auto;
+    margin-bottom:20px;
+    overflow-wrap:break-word;
+}
+.footer-message .message-once .sender-body p img {width:18px; height:18px}
+
+.footer-message .sender-name span img
+{
+    display: inline-block;
+    width:50px;
+    height:50px;
+    margin-left: 10px;
+}
+
+/********************************** End Style Of Messages Page **********************************/
+
+/********************************** Start Style Of MyInfo Page **********************************/
+
+.user-info
+{
+    padding:60px 0 100px 0;
+    /*background:#2d364c;*/
+    color:#FFF;
+}
+.user-info .edit {text-align:center; margin-bottom: 50px;}
+
+.user-info h1
+{
+    margin-bottom:30px;
+}
+.user-info .contact-form input,
+.user-info .contact-form textarea
+{
+    background-color: transparent;/*rgba(1,1,1,.4);*/
+    direction: rtl;
+    color:#333;
+}
+
+.user-info .contact-form input[type="file"]
+{
+    height:100%;
+}
+
+.user-info .contact-form input,
+.user-info .contact-form textarea,
+.user-info .contact-form .user-img,
+input[type="file"]{
+    margin-bottom: 20px;
+    outline: none;
+    border-width: 0 0 2px 0;
+    box-shadow: none !important;
+}
+.user-info .contact-form .form-control:focus 
+{
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+}
+/*Style Of Each Section When appear While Clicking On Buttons*/
+.user-info .edit-fellings{display:none}
+.user-info .edit-fellings h4 {margin-bottom:20px;}
+
+
+/********************************** End Style Of MyInfo Page **********************************/
+
+/********************************** Start Style Of MyPage Page **********************************/
+
+.mypage {padding: 70px 0 140px; text-align:center;}
+
+.mypage h1{margin-bottom:100px;}
+
+.mypage .owner img, .mypage .sender img {border-radius:10px; max-height:300px}
+
+.mypage .info *
+{
+    padding:10px 20px 10px 10px;
+    margin-top:0;
+    margin-bottom:10px;
+    color:#FFF;
+    border-radius: 10px;
+    font-size:17px;
+    text-align:right;
+}
+
+.mypage .info {overflow: hidden; margin: 0 0 30px 0;}
+
+.mypage .info > h3
+{
+    background:#004160;
+
+}
+.mypage .info > h4
+{
+    background:#3981d0;
+
+}
+.mypage .info p
+{
+    background:	#5eb8d7;
+}
+
+.mypage .message
+{
+    margin:0;
+    padding:0;
+}
+
+.mypage .message input, .mypage .message textarea {text-align:right; background:transparent}
+.mypage .message input[type = "text"] {margin-top:-16px;}
+
+/*Social Shaing Icons*/
+.mypage .social-share{
+    display:inline-block;
+}
+.mypage .social-share .a2a_default_style .a2a_svg {width: 150px; height: 45px; margin: 0 15px 20px 0;}
+.mypage .social-share .a2a_svg svg {width:47px}
+
+/*The Sender Style When sender sen message for the owner of message*/
+.mypage .sender .info p {margin: 15px 0 0 0;}
+.mypage .sender img {margin-top: -16px;}
+.mypage .sender .message {text-align:right}
+
+/*The Part Of Emojis*/
+.mypage .sender .emoji {margin:25px 0 10px;}
+.mypage .sender .emoji img {width:28px; height:28px; cursor:pointer;}
+.mypage .sender .emoji .emoji-icons {display:none; overflow:hidden;}
+.mypage .sender .emoji .emoji-icons img {margin:2px;display:inline-block}
+
+
+
+.mypage .sender .test
+{
+    min-width:100%;
+    min-height:200px;
+    outline:none;
+    padding:5px;
+    overflow:hidden;
+    background:transparent;
+}
+
+/********************************** End Style Of MyPage Page **********************************/
+
+/********************************** Start Style Global Footer **********************************/
+/***** Footer *****/
+
+footer {
+	padding: 80px 0 0 0;
+	background: url(../img/backgrounds/footer-bg.jpg) fixed;
+	color: #FFF;
+	text-align: left;
+}
+.footer-bottom {
+	padding-bottom: 100px;
+}
+.footer-bottom > div {margin-bottom: 20px;}
+.footer-bottom > div:last-of-type {border-right:none;}
+.footer-bottom h3
+{
+    margin: 0 0 40px 0;
+    font-size:30px;
+}
+
+.footer-bottom a {
+	font-size: 60px;
+    line-height: 40px;
+    margin: 0 10px;
+}
+
+.footer-bottom a:hover, .footer-bottom a:focus { color: #888; }
+footer .copyright
+{
+    padding: 6px 0;
+    background:#333;
+}
+
+footer .go-to-top
+{
+	background: url(../img/backgrounds/footer-bg.jpg) fixed;
+}
+footer .go-to-top a
+{
+    font-size:40px;
+    color:#FFF;
+}
+
+footer .go-to-top a i {
+    display:block;
+    padding:30px 0 100px;
+    transition:all ease-in-out .2s;
+}
+footer .go-to-top a i:hover{
+    font-size:50px;
+}
+
+/********************************** End Style Global Footer **********************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

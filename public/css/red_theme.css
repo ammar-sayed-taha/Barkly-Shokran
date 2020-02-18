@@ -1,0 +1,117 @@
+﻿/*************************  Start Globals *************************/
+button:hover, button:focus {
+    background-color: #b5302b !important;
+    border-color:#7d0500 !important;
+}
+/*Navbar*/
+.navbar.navbar-no-bg { background: #b50702;}
+/*Settings Style*/
+.web_colors .colors,  .web_colors .settings {background: #d63a35;}
+/*Selections*/
+::-moz-selection { background: rgba(214, 58, 53, 0.61);}
+::selection { background: rgba(214, 58, 53, 0.61);}
+
+/*Go To Top Button*/
+footer .go-to-top a i {color:#d63a35}
+
+/*Footer Bottom*/
+.footer-bottom h3, footer .copyright h4 {color:#d63a35}
+
+/*Nice Scroll*/
+.nicescroll-cursors {background:rgb(214, 58, 53); border:1px solid rgb(181, 7, 2)}
+
+/*************************  End Globals *************************/
+
+/*************************  Start Home Page *************************/
+/*header*/
+ul.navbar-nav span:first-of-type, .wel-come h1 > span {color: #F00;}
+.wel-come {background-color: #6d0300;}
+
+
+/*Log Regist Section*/
+.log-regist button, .footer-container button
+{
+    background-color:#d63a35;
+    border:solid 1px #9a1e1a;
+}
+
+/*Counter Section */
+.counter i
+{color: #f2333f;}
+.counter label{color:rgb(74, 185, 114);}
+
+/*Style of Team Workers*/
+.team-work .worker:hover {background:#d63a35;}
+.team-work .worker:hover h4 {color:#d63a35;}
+
+/*************************  Start Home Page *************************/
+
+/*************************  Start Login Page *************************/
+/*Title of h1*/
+.footer-log h1 > span:first-child{color: #d63a35;}
+.footer-log h1 > span:last-child{background: #d63a35;}
+
+/*focus on inputs*/
+.form-control:focus {
+    border-color: #ff0700;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(255, 152, 152, 0.075), 0 0 8px rgba(255, 123, 123, 0.6);
+    box-shadow: inset 0 1px 1px rgba(255, 152, 152, 0.075), 0 0 8px rgba(255, 123, 123, 0.6);
+}
+
+
+/*************************  Start Login Page *************************/
+
+/*************************  Start Register Page *************************/
+/*Titke of h1*/
+.footer-regist h1 {color:#d63a35;}
+.footer-regist h1 > span:last-child { color:#FFF; background: #d63a35;}
+/*************************  Start Register Page *************************/
+
+/*************************  Start AllMyPage Page *************************/
+.services-box .services-box-icon { background: #d63a35;}
+.footer-user-page h1 {color:#d63a35}
+.services-box * {color: #444}
+.services-box i.fa {color:#fff}
+
+
+/*************************  End AllMyPage Page *************************/
+
+/*************************  Start Messages Page *************************/
+.footer-message .message-once .sender-name, .footer-message .empty-messages {background:#d63a35}
+
+/*************************  End Messages Page *************************/
+
+/*************************  Start Myinfo Page *************************/
+.user-info h1, .user-info h4 {color:#d63a35}
+
+.user-info .contact-form .form-control:focus 
+{
+    border-color: #ff0700;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(255, 152, 152, 0.075), 0 0 8px rgba(255, 123, 123, 0.6);
+    box-shadow: inset 0 1px 1px rgba(255, 152, 152, 0.075), 0 0 8px rgba(255, 123, 123, 0.6);
+}
+/*************************  Start Myinfo Page *************************/
+
+/*************************  Start MyPage Page *************************/
+.mypage h1 {color:#d63a35}
+.mypage label {color: #d63a35; font-size: 23px;}
+
+/*************************  Start MyPage Page *************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

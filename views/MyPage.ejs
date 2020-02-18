@@ -1,0 +1,42 @@
+<%include shared/_Layout.ejs%>
+
+
+
+<section class="footer-container mypage">
+    <div class="container">
+        <div class="row">
+            <% if(data){ %>
+                <!-- *********** Show this part when the user make account -->
+                <h1>شارك اصدقاءك اخبارك السعيدة</h1>
+                <div class="col-sm-12 owner">
+                    <div class="col-sm-4 col-xs-12">
+                        <% var imgPath = data.image;%>
+                        <img src="<%= imgPath%>" class="img-responsive img-circle" />                            
+                    </div>
+                    <div class="col-sm-8 col-xs-12">
+                        <div class="info">
+                            <h3 class="wow fadeInLeftBig"><%= data.name%></h3>
+                            <h4 class="wow fadeInLeftBig"><%= data.eduPlace %></h4>
+                            <p class="description wow fadeInLeftBig"><%= data.description%></p>
+                        </div>
+                        <div class="social-share">
+                            <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                                <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                                <a class="a2a_button_facebook"></a>
+                                <a class="a2a_button_twitter"></a>
+                                <a class="a2a_button_google_plus"></a>
+                            </div>
+                            <script async src="https://static.addtoany.com/menu/page.js"></script>
+                        </div>
+                    </div>
+                </div>
+            <% }else{ %>
+                    <!-- ************* Share this part when the sender will write message for his friend -->
+                    <%include includes/sendMsg %>
+            <% } %>
+
+        </div>
+    </div>
+</section>
+
+<%include shared/footer.ejs%>

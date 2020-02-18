@@ -1,0 +1,108 @@
+﻿/*************************  Start Globals *************************/
+button:hover, button:focus {
+    background-color: #043c61 !important;
+    border-color: #003d65 !important;
+}
+
+/*Navbar*/
+.navbar.navbar-no-bg {background: rgb(58, 70, 99);}
+
+/*Settings Style*/
+.web_colors .colors, .web_colors .settings {background:  rgb(81, 99, 144);}
+/*Selections*/
+::-moz-selection { background: rgba(45, 54, 76, 0.7);}
+::selection { background: rgba(45, 54, 76, 0.7);}
+
+/*Go To Top Button*/
+/*Footer Bottom*/
+.footer-bottom h3, footer .copyright h4, footer .go-to-top a i {color:#6f95f9}
+
+
+/*************************  Start Globals *************************/
+
+/*************************  Start Home Page *************************/
+/*header*/
+ul.navbar-nav span:first-of-type, .wel-come h1 > span {
+    color: #6f99ff;
+}
+.wel-come {background:rgb(22, 31, 53);}
+
+/*Log Regist Section*/
+.log-regist button, .footer-container button
+{
+    background-color:rgb(66, 77, 105);
+    border:solid 1px rgb(11, 32, 84);
+}
+
+/*Counter Section */
+.counter i
+{color: #424d69;}
+.counter label{color:rgb(129, 149, 255);}
+
+/*Style of Team Workers*/
+.team-work .worker:hover {background:#516390;}
+.team-work .worker:hover h4 {color:#516390;}
+
+
+/*************************  End Home Page *************************/
+
+/*************************  Start Login Page *************************/
+/*Title of h1*/
+.footer-log h1 > span:first-child{color: #2d364c;}
+.footer-log h1 > span:last-child{background: #2d364c;}
+
+
+/*************************  End Login Page *************************/
+
+/*************************  Start Register Page *************************/
+/*Titke of h1*/
+.footer-regist h1 {color:#2d364c;}
+.footer-regist h1 > span:last-child { color:#FFF; background: #2d364c;}
+/*************************  Start Register Page *************************/
+
+/*************************  Start AllMyPage Page *************************/
+.services-box .services-box-icon { background: rgb(45, 54, 76); /* Old browsers */}
+.footer-user-page h1 {color:#516390}
+.services-box *{color:#333;}
+.services-box i {color:#FFF}
+/*************************  End AllMyPage Page *************************/
+
+/*************************  Start Messages Page *************************/
+
+/*Message Of Sender*/
+.footer-message .message-once .sender-name, .footer-message .empty-messages {background:rgb(45, 54, 76)}
+
+/*************************  End Messages Page *************************/
+
+/*************************  Start Myinfo Page *************************/
+.user-info h1, .user-info h4{color:#1c3269}
+.user-info .contact-form input, .user-info .contact-form textarea
+{ background:none; color:#333;}
+
+/*************************  End Myinfo Page *************************/
+
+/*************************  Start MyPage Page *************************/
+.mypage h1 {color:#1c3269;}
+.mypage label {color: #1c3269; font-size: 23px;}
+/*************************  End MyPage Page *************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

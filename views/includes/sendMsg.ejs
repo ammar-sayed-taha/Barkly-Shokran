@@ -1,0 +1,109 @@
+<% if(sender){ %>
+<div class="sender">
+        <% if(sentMsg){ %> <div class="text-success">تم ارسال الرساله بنجاح</div><%}%>
+        <h1>رسالتك بالتاكيد ستسعدنى</h1>
+        <div class="col-sm-6 col-xs-12">
+            <div class="col-xs-4">
+                <% var imgPath = sender.image;%>
+                <img src="<%= imgPath%>" class="img-responsive img-circle" /> 
+            </div>
+            <div class="col-xs-8 info">
+                <h3 class="wow fadeInLeftBig"><%= sender.name %></h3>
+                <h4 class="wow fadeInLeftBig"><%= sender.eduPlace%></h4>
+            </div>
+            <div class="col-xs-12 info">
+                <p class="description wow fadeInLeftBig"><%= sender.description %></p>
+            </div>
+
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="contact-form message">
+                <form role="form" action="MyPage" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input hidden="hidden" type="text" name="userid" value="<%= sender._id %>">
+                    </div>
+                    <div class="form-group">
+                        <input id="senderName" class = "contact-email form-control" placeholder = "اسم المرسل - اختياري" name="senderName">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" class = "contact-email form-control" placeholder = "اكتب رسالتك هنا" value ="" required = true  name="message" ></textarea>
+                    </div>
+                    <div class="form-group">
+                        <div class="emoji">
+                            <div class="emoji-img">
+                                <img src="img/emojis/grinning-face_1f600.png" />
+                            </div>
+                            <div class="emoji-icons">
+                                <img src="img/emojis/angry-face_1f620.png" data-value="(غاضب)" />
+                                <img src="img/emojis/anguished-face_1f627.png" data-value="(مؤلم)" />
+                                <img src="img/emojis/astonished-face_1f632.png" data-value="(مندهش)" />
+                                <img src="img/emojis/confounded-face_1f616.png" data-value="(مرتبك)" />
+                                <img src="img/emojis/confused-face_1f615.png" data-value="(مشوش)" />
+                                <img src="img/emojis/crying-face_1f622.png" data-value="(باكى)" />
+                                <img src="img/emojis/disappointed-but-relieved-face_1f625.png" data-value="(محبط-لكن-مرتاح)" />
+                                <img src="img/emojis/disappointed-face_1f61e.png" data-value="(محبط)" />
+                                <img src="img/emojis/dizzy-face_1f635.png" data-value="(مصاب-بدوار)" />
+                                <img src="img/emojis/expressionless-face_1f611.png" data-value="(فاقد-التعابير)" />
+                                <img src="img/emojis/face-savouring-delicious-food_1f60b.png" data-value="(لذيذ)" />
+                                <img src="img/emojis/face-screaming-in-fear_1f631.png" data-value="(يصرخ-من-الخوف)" />
+                                <img src="img/emojis/face-throwing-a-kiss_1f618.png" data-value="(يرمى-قلب)" />
+                                <img src="img/emojis/face-with-cold-sweat_1f613.png" data-value="(بارد-العرق)" />
+                                <img src="img/emojis/face-with-look-of-triumph_1f624.png" data-value="(مواجه-مع-انتصار)" />
+
+                                <img src="img/emojis/face-with-medical-mask_1f637.png" data-value="(قناع-طبى)" />
+                                <img src="img/emojis/face-with-open-mouth-and-cold-sweat_1f630.png" data-value="(فم-مفتوح-مريض)" />
+                                <img src="img/emojis/face-with-open-mouth_1f62e.png" data-value="(فم-مفتوح-مندهش)" />
+                                <img src="img/emojis/face-with-stuck-out-tongue-and-tightly-closed-eyes_1f61d.png" data-value="(مغلق-عينين-خاج-لسان)" />
+                                <img src="img/emojis/face-with-stuck-out-tongue-and-winking-eye_1f61c.png" data-value="(مغلق-عين-واحدة)" />
+                                <img src="img/emojis/face-with-stuck-out-tongue_1f61b.png" data-value="(مخرج-لسانه)" />
+                                <img src="img/emojis/face-with-tears-of-joy_1f602.png" data-value="(موقف-مضحك)" />
+                                <img src="img/emojis/face-without-mouth_1f636.png" data-value="(مندهش-مصدوم)" />
+                                <img src="img/emojis/fearful-face_1f628.png" data-value="(يخشى-شئ)" />
+                                <img src="img/emojis/flushed-face_1f633.png" data-value="(وجه-متوهج)" />
+                                <img src="img/emojis/frowning-face-with-open-mouth_1f626.png" data-value="(مقطب-الوجه)" />
+                                <img src="img/emojis/grimacing-face_1f62c.png" data-value="(مقطب-الوجه-باسنان)" />
+                                <img src="img/emojis/grinning-face-with-smiling-eyes_1f601.png" data-value="(مبتسم-باسنان)" />
+                                <img src="img/emojis/grinning-face_1f600.png" data-value="(مبتسم-بدون)" />
+                                <img src="img/emojis/hushed-face_1f62f.png" data-value="(هادئ-الوجه)" />
+
+                                <img src="img/emojis/kissing-face-with-closed-eyes_1f61a.png" data-value="(قبلة-عين-مغلقة)" />
+                                <img src="img/emojis/kissing-face-with-smiling-eyes_1f619.png" data-value="(قبلة-عين-مبتسمة)" />
+                                <img src="img/emojis/kissing-face_1f617.png" data-value="(قبلة-عين-مفتوحة)" />
+                                <img src="img/emojis/loudly-crying-face_1f62d.png" data-value="(بكاء-شديد)" />
+                                <img src="img/emojis/neutral-face_1f610.png" data-value="(وجه-محايد)" />
+                                <img src="img/emojis/pensive-face_1f614.png" data-value="(وجه-متأمل)" />
+                                <img src="img/emojis/persevering-face_1f623.png" data-value="(وجه-مثابر)" />
+                                <img src="img/emojis/pouting-face_1f621.png" data-value="(وجه-عابس)" />
+                                <img src="img/emojis/relieved-face_1f60c.png" data-value="(وجه-مرتاح)" />
+                                <img src="img/emojis/sleeping-face_1f634.png" data-value="(نائم)" />
+                                <img src="img/emojis/sleepy-face_1f62a.png" data-value="(غارق-فى-النوم)" />
+                                <img src="img/emojis/slightly-smiling-face_1f642.png" data-value="(وجه-راضى)" />
+                                <img src="img/emojis/smiling-face-with-halo_1f607.png" data-value="(وجه-كالملاك)" />
+                                <img src="img/emojis/smiling-face-with-heart-shaped-eyes_1f60d.png" data-value="(قلوب-فى-العين)" />
+                                <img src="img/emojis/smiling-face-with-open-mouth-and-cold-sweat_1f605.png" data-value="(بسمة-باحراج)" />
+                                <img src="img/emojis/smiling-face-with-open-mouth-and-smiling-eyes_1f604.png" data-value="(مبتسم-بفم-مفتوح)" />
+                                <img src="img/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png" data-value="(مبتسم-عين-مغلقة)" />
+                                <img src="img/emojis/smiling-face-with-open-mouth_1f603.png" data-value="(مبتسم-عين-مفتوح)" />
+                                <img src="img/emojis/smiling-face-with-smiling-eyes_1f60a.png" data-value="(يشعر-بالرضا)" />
+                                <img src="img/emojis/smiling-face-with-sunglasses_1f60e.png" data-value="(مبتسم-بنظارة)" />
+                                <img src="img/emojis/smirking-face_1f60f.png" data-value="(متكلف-الابتسامة)" />
+                                <img src="img/emojis/tired-face_1f62b.png" data-value="(وجه-متعب)" />
+                                <img src="img/emojis/unamused-face_1f612.png" data-value="(غير-مستمع)" />
+                                <img src="img/emojis/weary-face_1f629.png" data-value="(يشعر-بالضجر)" />
+                                <img src="img/emojis/white-smiling-face_263a.png" data-value="(يشعر-بالتفاؤل)" />
+                                <img src="img/emojis/winking-face_1f609.png" data-value="(وجه-بغماسة)" />
+                                <img src="img/emojis/worried-face_1f61f.png" data-value="(يشعر-بالقلق)" />
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label>اضف صورة</label>
+                        <input type="file" class="form-control input-lg" style="direction:rtl" id="file" name="file" />
+                    </div>
+                    <button type="submit" class="btn btn-danger btn-block input-lg">ارسال</button>
+                </form>
+            </div>
+        </div>
+    </div>
+<% } %>

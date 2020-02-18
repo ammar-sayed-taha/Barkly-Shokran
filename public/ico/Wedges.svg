@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg class="lds-wedges" width="70px" height="70px" style="background:none" preserveAspectRatio="xMidYMid" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(50,50)">
+<g transform="scale(1)" ng-attr-transform="scale({{config.scale}})">
+<g transform="translate(-50,-50)">
+<g transform="rotate(240 50 50)">
+<animateTransform attributeName="transform" begin="0s" calcMode="linear" dur="0.7s" keyTimes="0;1" repeatCount="indefinite" type="rotate" values="0 50 50;360 50 50"/>
+<path d="m50 50v-50a50 50 0 0 1 50 50z" fill="#f00" fill-opacity=".8" ng-attr-fill="{{config.c1}}" ng-attr-fill-opacity="{{config.opacity}}"/>
+</g>
+<g transform="rotate(90 50 50)">
+<animateTransform attributeName="transform" begin="0s" calcMode="linear" dur="0.9333333333333332s" keyTimes="0;1" repeatCount="indefinite" type="rotate" values="0 50 50;360 50 50"/>
+<path transform="rotate(90 50 50)" d="m50 50v-50a50 50 0 0 1 50 50z" fill="#55ef0b" fill-opacity=".8" ng-attr-fill="{{config.c2}}" ng-attr-fill-opacity="{{config.opacity}}"/>
+</g>
+<g transform="rotate(300 50 50)">
+<animateTransform attributeName="transform" begin="0s" calcMode="linear" dur="1.4s" keyTimes="0;1" repeatCount="indefinite" type="rotate" values="0 50 50;360 50 50"/>
+<path transform="rotate(180 50 50)" d="m50 50v-50a50 50 0 0 1 50 50z" fill="#c5ff00" fill-opacity=".8" ng-attr-fill="{{config.c3}}" ng-attr-fill-opacity="{{config.opacity}}"/>
+</g>
+<g transform="rotate(150 50 50)">
+<animateTransform attributeName="transform" begin="0s" calcMode="linear" dur="2.8s" keyTimes="0;1" repeatCount="indefinite" type="rotate" values="0 50 50;360 50 50"/>
+<path transform="rotate(270 50 50)" d="m50 50v-50a50 50 0 0 1 50 50z" fill="#ef00d1" fill-opacity=".8" ng-attr-fill="{{config.c4}}" ng-attr-fill-opacity="{{config.opacity}}"/>
+</g>
+</g>
+</g>
+</g>
+</svg>

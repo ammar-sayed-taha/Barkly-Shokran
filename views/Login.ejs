@@ -1,0 +1,70 @@
+<%include shared/_Layout.ejs%>
+
+
+<section class="footer-container footer-log">
+    <!-- <div class="dark-bg"></div> -->
+    <div class="container">
+        <div class="row">
+            <h1><span>سعداء لو</span><span>جودك معنا</span></h1>
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="contact-form">
+                    <form id="LoginForm" role="form" action="Login" method="post">
+                        <div class="form-group">
+                            <!-- *********** Loging ********* -->
+                            <span id="Logining" hidden class="text-success">جاري تسجيل الدخول برجاء الانتظار....</span>
+                            <!-- ********* Display if there is error ********** -->
+                            <span id="errorLogin" hidden class="text-danger">اسم المستخدم او رقم السر غير صحيح</span>
+                        </div>
+                        <div class="form-group">
+                            <input id="username" class = "contact-email form-control input-lg " name="username" placeholder = "اسم المستخدم" type="text" required="required" autocomplete="on">
+
+                        </div>
+                        <div class="form-group">
+                            <input id="password" class = "contact-email form-control input-lg " name="password" placeholder = "الرقم السري" type="password" required="required" autocomplete="on">
+
+                        </div>
+                        <button id="LoginBtn" type="submit" class="btn btn-danger btn-block input-lg ">   تسجيل الدخول</button>
+             
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    var socket = io();
+    var check = 1;
+       $('#LoginForm').on('submit', (e) => {
+           var  loading = $('#Logining'),
+                error = $('#errorLogin');
+            loading.removeAttr('hidden'); //show the logining text
+            error.attr('hidden', 'hidden'); //hide the error text
+
+           if(check){
+                e.preventDefault();
+                socket.emit('Login', {username: $('#username').val(), password: $('#password').val()})
+
+                //back to check the status of login
+                socket.on('LoginStatus', (status) => {
+                    if(status.status){
+                            check = 0;
+                            var url = window.location.protocol + '//'+ window.location.host + '/AllMyPage?id=' + status.id + '&Login=true'
+                            location.replace(url) //redirect the page
+                            
+                    }else{
+                        error.removeAttr('hidden');  //show the error text
+                        loading.attr('hidden', 'hidden'); //hide the logining text
+                        console.log('Login Regicted')
+                    }
+                        
+                })
+           }
+       })
+        // Login When the user POST
+   
+</script>
+
+<%include shared/footer.ejs%>
+
+

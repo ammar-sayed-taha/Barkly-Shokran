@@ -1,0 +1,149 @@
+﻿
+@media (min-width: 992px) and (max-width: 1200){
+
+	.services-box .services-box-icon { width: 60px; height: 60px; font-size: 32px; line-height: 60px; }
+		
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.services-box .services-box-icon { width: 50px; height: 50px; font-size: 26px; line-height: 50px; }
+	
+    /*Home Page*/
+    .wel-come {padding: 50px 0 70px 0;}
+    .wel-come h1, .user-info h1 {font-size: 40px;margin: 0 0 35px;}
+    .wel-come .wel .typed {font-size:25px;}
+
+    /*Login Page*/
+    .footer-log h1 span {font-size:35px;}
+
+    /*AllMyPage Page*/
+    .services-box .services-box-icon i {
+        line-height: 52px;
+        font-size: 30px;
+    }
+    
+    /****** MyPage Page Style *******/
+    .mypage h1 {font-size:40px;}
+
+
+    /*Social Shaing Icons*/
+    .a2a_kit {margin:0 0 0 54px}
+    .mypage .social-share .a2a_default_style .a2a_svg {margin: 0 15px 20px 0;}
+    .mypage .social-share .a2a_svg svg {width:47px}
+
+
+
+}
+
+@media (max-width: 767px) {
+	
+    /*Loading Shap Style*/
+    #loading .load-shap {left:-43%}
+
+    .navbar-brand { margin-left: 15px; }
+	.navbar-collapse { border: 0; }
+	.navbar-inverse ul.navbar-nav li a { padding-top: 10px; padding-bottom: 10px; }
+	.navbar-inverse .navbar-toggle { border-color: #fff; }
+	
+	.inner-bg { padding: 140px 0; }
+	.top-content .top-big-link { margin-top: 25px; }
+	.top-content .top-big-link a.btn { margin-top: 10px; }
+	
+	.section-description p { padding: 0; }
+	
+    .footer-user-page {padding:0;}
+	.services-container { padding-bottom: 60px; }
+    .footer-user-page h1 {margin-bottom:25px}
+	.services-box { text-align: center; padding: 20px 0;}
+	.services-box h3 { margin-top: 20px; padding-top: 10px; }
+	
+	
+	footer { text-align: center; }
+	.footer-right { padding-top: 30px; }
+	.footer-social a { margin-left: 3px; margin-right: 3px; }
+
+    /***** Globals *****/
+    .log-regist button, .footer-container button {font-size:19px !important; height: 50px !important}
+    
+     /*slide show of home page*/
+    .slide-show .carousel-inner .carousel-caption,
+     .slide-show .carousel-indicators {display:none;}
+
+    /*Home Page*/
+    .wel-come {padding: 40px 0 50px 0;}
+    .wel-come h1, .user-info h1 { font-size: 28px; }
+    .wel-come .wel .typed{font-size: 15px;margin: 0 0 20px;}
+    .counter .count-1, .counter .count-2,
+    .counter .count-3 
+    {
+       padding: 20px 0;
+    }
+
+    /*footer*/
+    .footer-bottom h3 {font-size:25px;font-weight:bold;border-top:1px solid #fff;padding-top:20px}
+    .footer-bottom > div:first-child h3 {border-top: 0}
+    .footer-bottom h3.NoTopBorder {border-top:none}
+
+    /***** Messages Page ******/
+    /*Message Section*/
+    .footer-message .sender-name span img {width: 40px; height:40px;}
+    .footer-message .sender-name span {font-size: 15px}
+
+    /*Login Page*/
+    .footer-log h1  span {font-size:35px;}
+
+    /********** My Page **********/
+    .mypage h1 {font-size:35px;}
+    /*Social Shaing Icons*/
+    .mypage .social-share .a2a_default_style .a2a_svg {margin: 0 0px 20px 0;}
+
+    /**************** Myinfo page ***************/
+    .user-info .contact-form textarea {font-size:15px}
+}
+
+@media (min-width: 0) and (max-width: 415px) {
+
+    /***** Globals *****/
+    .log-regist button, .footer-container button {font-size:15px !important; height: 35px !important}
+    /*Loading Shap Style*/
+    #loading .load-shap {left:-34%}
+
+	
+    h1, h2,.wel-come h1,
+    .user-info h1 { font-size: 25px; margin: 0 0 10px;}
+    h3 {font-size:15px !important;}
+    
+    /*Home Page */
+    .alert h2 {font-size: 15px}
+    .wel-come {padding: 25px 0 50px 0;}
+    .wel-come .wel .typed{font-size: 10px;}
+    .counter .count-1, .counter .count-2,
+     .counter .count-3 
+    {
+       padding: 15px 0;
+    }
+
+    /*footer*/
+    .footer-bottom h3 {font-size:20px;font-weight:bold;border-top:1px solid #fff;padding-top:12px}
+    .footer-bottom h3.NoTopBorder {border-top:none}
+    
+    /*Login Page*/
+    .footer-log h1  span {font-size:20px;}
+    
+    /*My Page*/
+    .mypage h1 {font-size:21px; margin-bottom: 70px;}
+    .mypage .owner .col-xs-4{max-width:100px; max-height:100px}
+
+    .mypage .social-share .a2a_default_style .a2a_svg{width:130px; height:37px}
+    .mypage .social-share .a2a_svg svg {width:35px}
+
+    /**************** Myinfo page ***************/
+    .user-info .contact-form textarea {font-size:13px }
+
+    /**************** Message page ***************/
+    .footer-message h1 {font-size: 20px; margin-bottom: 100px;}
+
+
+
+
+}

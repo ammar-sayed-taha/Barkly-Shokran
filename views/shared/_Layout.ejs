@@ -1,0 +1,120 @@
+
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="ساعد اصدقاءك-عاءلتك لمشاركة اوقاتك السعيده" />
+    <meta name="keywords" content="’MabroukMe, Mabrouk, باركلي شكرا, باركلي,
+	شكرا,Thanks, تهاني" />
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>باركلي شكرا</title>
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="ico/logo.png">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/NewStyle.css" />
+    <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="stylesheet" href="css/default_theme.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- call the socket to handle socket io -->
+    <script src = "/socket.io/socket.io.js"></script>
+
+
+</head>
+<body id="scroll" style="overflow:hidden;">
+
+    <!-- Loader -->
+    <!-- Top menu -->
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-no-bg" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/img/backgrounds/body_bg.jpg" class="navbar-brand"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="top-navbar-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">
+                        <span>باركلى </span><span>شكرا</span>
+                    </a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <% if(sess){  %>
+                        <li><a href="AllMyPage?id=<%= sess%>">الصفحة الشخصية</a></li>
+
+                        <li><a href="LogOut">تسجيل خروج</a></li>
+                    <% }else{ %>
+                        <li><a href="Register">انشيء حسابك</a></li>
+                        <li><a href="Login">تسجيل الدخول</a></li>
+                    <% }%>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- ***************  if the message added successfully ******************* -->
+<!-- @if (TempData["AddMessage"] != null)
+{
+    <div class="alert alert-success">
+        <h2>  @TempData["AddMessage"].ToString()</h2>
+    </div>
+} -->
+
+    <div class="web_colors">
+        <div class="colors">
+            <span data-value="css/red_theme.css"></span>
+            <span data-value="css/green_theme.css"></span>
+            <span data-value="css/default_theme.css"></span>
+            <span data-value="css/labany_theme.css"></span>
+            <span data-value="css/dark_theme.css"></span>
+            <span data-value="css/pink_theme.css"></span>
+
+        </div>
+
+        <div class="settings">
+            <div class="icon"><i class="fa fa-cog" aria-hidden="true"></i></div>
+        </div>
+
+    </div>
+
+
+    <!-- The Page Appear Will The Website Loading  -->
+    <!-- <div id="loading">
+        <div class="load-shap">
+            <img src="ico/Wedges.svg" />
+            <div class="load-text">
+                <span>L</span>
+                <span>O</span>  
+                <span>A</span>
+                <span>D</span>
+                <span>I</span>
+                <span>N</span>
+                <span>G</span>
+                <span>.</span>
+                <span>.</span>
+                <span>.</span>
+
+            </div>
+        </div>
+   </div> -->
+   
+
+
+    

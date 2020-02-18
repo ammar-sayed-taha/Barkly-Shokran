@@ -1,0 +1,135 @@
+<%include shared/_Layout.ejs%>
+
+<%
+    var name        = '',
+    description     = '',
+    eduPlace        = '',
+    image           = '',
+    username        = '',
+    password        = '',
+    conPassword     = '',
+    existUsername   = ''
+
+    if(errors){
+    //get the input fields validation from data array
+    if(errors.data){
+        errors.data.forEach(value => {
+            if(value.param == 'name')
+                name = value.msg
+            else if(value.param == 'description')
+                description = value.msg
+            else if(value.param == 'eduPlace')
+                eduPlace = value.msg
+            else if(value.param == 'username')
+                username = value.msg
+            else if(value.param == 'password')
+                password = value.msg
+            else if(value.param == 'conPassword')
+                conPassword = value.msg
+        })
+    }
+    //now get the rest or errors
+    if(errors.existUsername)
+        existUsername = errors.existUsername
+    if(errors.image)
+        image = errors.image
+   
+}
+
+//return the body values in the its fields
+%>
+<section class="footer-container user-info">
+    <div class="container">
+        <div class="row">
+            <div class="edit col-xs-12">
+                <button class="btn btn-danger col-xs-6" type="button">بماذا أشعر الان</button>
+                <button class="btn btn-danger col-xs-6" type="button">تعديل معلوماتى</button>
+            </div>
+
+            <form id="editMyDescription" role="form" action="editMyDescription" method="post">
+                <div class="edit-fellings col-xs-12">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div class="contact-form">
+                            <div class="form-group">
+                                <h4>...وصف موجز عن شعورك</h4>
+                                <textarea class = "contact-email form-control input-lg" placeholder = "وصف موجز عن شعورك تجاه سبب سعاتك" name="description"><%=data.description%></textarea>
+                                <% if(description != ''){ %><div class="text-danger"><%= description %></div><%}%>
+                            </div>
+                            <button type="submit" class="btn btn-danger btn-block input-lg">تعديل الرساله</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form action="MyInfo" method="post" enctype="multipart/form-data">
+                <div class="edit-settings col-xs-12">
+                    <h1>قم بتحديث معلوماتك</h1>
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <div class="contact-form">
+                            <div class="form-group">
+                                <h4>الاسم</h4>
+                                <input class = "contact-email form-control input-lg" name="name"  type="text" value="<%=data.name%>">
+                                <% if(name != ''){ %><div class="text-danger"><%= name %></div><%}%>
+                            </div>
+                            <div class="form-group">
+                                <h4>اسم الكليه/المدرسة إن وجد</h4>
+                                <input class = "contact-email form-control input-lg" name="eduPlace" type="text" value="<%=data.eduPlace%>">
+                                <% if(eduPlace != ''){ %><div class="text-danger"><%= eduPlace %></div><%}%>
+                            </div>
+
+                            <div class="form-group">
+                                <h4>أضف صورة</h4>
+                                <div class="col-xs-4 user-img">
+                                    <img src="<%= data.image%>" alt="User Image" class="img-responsive img-thumbnail img-rounded" id="img-register" />
+                                </div>
+                                <div class="col-xs-8">
+                                    <input class = "form-control input-lg" id="file" name="file" type="file">
+                                </div>
+                            </div>
+                            <div style="clear: both"></div>
+                            <% if(image != ''){ %><div class="text-danger"><%= image %></div><%}%>
+                            <div class="form-group">
+                                <h4>اسم المستخدم</h4>
+                                <input class = "contact-email form-control input-lg" name="username" type="text" value="<%=data.username%>">
+                                <% if(username != ''){ %><div class="text-danger"><%= username %></div><%}%>
+                                <% if(existUsername != ''){ %><div class="text-danger"><%= existUsername %></div><%}%>
+                            </div>
+
+                            <div class="form-group">
+                                <h4>الرقم السري</h4>
+                                <input name="password" type="password" class = "contact-email form-control input-lg" placeholder = " الرقم السري الجديد" value="<%=data.password%>">
+                                <% if(password != ''){ %><div class="text-danger"><%= password %></div><%}%>
+                            </div>
+
+                            <div class="form-group">
+                                <h4>تاكيد الرقم السري</h4>
+                                <input class = "contact-email form-control input-lg" name="conPassword" type="password"  placeholder = "تاكيد الرقم السري الجديد" value="<%=data.password%>">
+                                <% if(conPassword != ''){ %><div class="text-danger"><%= conPassword %></div><%}%>
+                            </div>
+
+                            <button type="submit" class="btn btn-danger btn-block input-lg">تعديل المعلومات</button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+
+
+
+        </div>
+    </div>
+</section>
+
+
+<%include shared/footer.ejs%>
+
+
+<script>
+    var socket = io()
+    $('#file').on('change', function (e) {
+        $('#img-register').fadeIn('fast').attr('src', URL.createObjectURL(e.target.files[0]));
+    });
+
+</script>
+
+
